@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="About info">
+<meta name="keywords" content="Zach Marion, zmmarion@gmail.com, poetry, Baltimore">
+<meta name="author" content="Zach Marion">
+<title>Covers</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 11%);
+  color: hsl(0, 0%, 89%);
+  font-family: Helvetica;
+}
+
+header {
+  font-family: Courier;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: hsl(0, 0%, 11%);
+  font-family: Courier;
+  width: 100%;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+  width: 100%;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer; 
+  border: none;
+  outline: none;
+  color: hsl(0, 0%, 89%);
+  padding: 12px 100px 12px 12px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 11%);
+  min-width: 160px;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+#web-content {
+  display: none;
+}
+
+.dropdown-content a {
+ 
+  float: none;
+  color: hsl(0, 0%, 89%);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(0, 0%, 15%);
+}
+
+.show {
+  display: block!important;
+}
+
+.column {
+  position: relative;
+  text-align: center;
+}
+
+#set-menu {
+  display: inline-block;
+  text-align: right;
+  padding-right: 175px;
+}
+  
+#set-text {
+  display: inline-block;
+  text-align: left;
+  padding-right: 175px;
+}
+
+/*set image*/
+.set {
+  display: block;
+  margin: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar,.dropdown,.dropbtn,.dropdown-content {
+    text-align: justify;
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<header>
+  
+  <div class="navbar">
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Menu
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="covers.html">Covers</a>
+      <a href="serf.html">I&#46; Serf</a>
+      </p>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+      document.getElementById("web-content").classList.toggle("show");
+    }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+      var myContent = document.getElementById("web-content");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+      if (!myContent.classList.contains('show')) {
+        myContent.classList.add('show');
+      }
+    }
+  }
+  </script>
+</header>
+
+<body>
+<div id="web-content" class="show">
+<div class="column">
+  <img src="images/about_img.JPEG" alt="biographic photo" style="max-width:25%;height:auto" class="set">
+    <div id="set-text">
+      <h3><u>About</u></h3>
+      <p> Zach Marion<br>
+      1992-????<br>
+      zmmarion@gmail.com<br>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
